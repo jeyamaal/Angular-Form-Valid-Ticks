@@ -1,0 +1,16 @@
+<p>
+  home works!
+</p>
+<!-- <form [formGroup]="homeForm" (ngSubmit)="onHomeFormSubmit()"> -->
+  <form [formGroup]="homeForm" (ngSubmit)="onHomeFormSubmit()">
+  <input type="text" class="form-control" placeholder="Home" formControlName="homeName">
+
+  <br>
+  <button type="submit" class="btn btn-success" [disabled]=homeForm.invalid (click)="btnNextHomeClick();">Save and Continue</button>
+
+  <!-- If form is valid show tick Mark -->
+  <div *ngIf= "!homeForm.invalid">
+      &#x2705;
+  </div>
+</form>
+

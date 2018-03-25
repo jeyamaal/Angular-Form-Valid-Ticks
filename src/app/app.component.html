@@ -1,0 +1,54 @@
+<form [formGroup]="appForm"> 
+
+	<br><br>
+	<div class="col-sm-3 col-lg-2" id="navBar" style="background-color:rgb(240, 248, 255)">
+
+		<div class="row">
+			<div class="col-sm-3 col-lg-6">
+				<ul class="nav flex-column">
+					<li class="nav-item">
+						<a class="nav-link active" routerLink="/home" routerLinkActive="active">Home </a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-sm-3 col-lg-6" *ngIf="boolValue">
+				&#x2705;
+			</div>
+      		<!-- <div class="col-sm-3 col-lg-6" *ngIf= "!appForm.invalid">
+				&#x2705;
+			</div> -->
+		</div>
+
+		<div class="row">
+			<div class="col-sm-3 col-lg-6">
+				<ul class="nav flex-column">
+					<li class="nav-item">
+						<a class="nav-link" routerLink="/school">School</a>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+
+		<div class="row">
+			<div class="col-sm-3 col-lg-6">
+				<ul class="nav flex-column">
+					<li class="nav-item">
+						<a class="nav-link" routerLink="/work">Work</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+  <!-- <input type="text" formControlName="appName"  [value]="appFormValid"/> -->
+
+
+	<div class="col-sm-9 col-lg-7" id="reccontent">
+		<div class="panel-heading">
+			<br><br>
+			<router-outlet></router-outlet>
+		</div>
+	</div>
+
+</form>
